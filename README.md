@@ -1,4 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pompano Beach Property For Sale
+
+AI-powered Pompano Beach real estate platform. Zillow-style property search, IDX listing integration, SEO-driven landing pages, and programmatic city-level real estate content architecture.
+
+## Stack
+
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **TailwindCSS**
+- **Supabase** (database and auth)
+- **Mapbox** (property maps via react-map-gl)
+
+## Features
+
+- Property search with advanced filters (price, beds, baths, type, pool, waterfront, etc.)
+- Interactive map search with Mapbox markers
+- Property detail pages with gallery, mortgage calculator, price history
+- AI-powered home search with natural language queries
+- Programmatic SEO pages for all property types
+- Neighborhoods directory
+- Real estate blog
+- Sitemap and robots.txt generation
+- Schema markup (RealEstateListing, ItemList)
+
+## Project Structure
+
+```
+/app
+  /listings          - All listings page
+  /property/[id]     - Property detail page
+  /search            - Map + list search page
+  /neighborhoods     - Neighborhoods directory
+  /blog              - Real estate blog
+  /seo               - Programmatic SEO landing pages
+    /homes-for-sale
+    /condos-for-sale
+    /waterfront-homes
+    /luxury-homes
+    /new-construction
+    /homes-with-pool
+/components          - Reusable UI components
+/lib                 - Utilities, types, Supabase client, mock data
+```
+
+## Environment Variables
+
+Copy `.env.local.example` to `.env.local` and fill in your credentials:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Required variables:
+- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous key
+- `NEXT_PUBLIC_MAPBOX_TOKEN` - Your Mapbox public token
 
 ## Getting Started
 
